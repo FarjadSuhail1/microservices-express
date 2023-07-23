@@ -30,4 +30,4 @@ app.delete("/inventory", (req, res) => {
   res.send("DELETE INVENTORY");
 });
 
-app.listen(5002);
+app.listen(3002);

@@ -30,4 +30,4 @@ app.delete("/users", (req, res) => {
   res.send("DELETE USERS");
 });
 
-app.listen(5007);
+app.listen(3007);

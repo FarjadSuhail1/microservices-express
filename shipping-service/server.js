@@ -18,24 +18,9 @@ app.get("/shipping", (req, res) => {
   res.send("GET SHIPPING");
 });
 
-app.post("/shipping", async (req, res) => {
-  const requestData = req.body;
-
-  fetch('http://localhost:5009/billing', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(requestData),
-  })
-    .then(response => response.json())
-    .then(data => {
-      // console.log('Response:', data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      // Handle any errors
-    });
+app.post("/shipping", (req, res) => {
+  console.log(req.body);
+  res.send("POST SHIPPING");
 });
 
 app.put("/shipping", (req, res) => {
@@ -46,4 +31,4 @@ app.delete("/shipping", (req, res) => {
   res.send("DELETE SHIPPING");
 });
 
-app.listen(5001);
+app.listen(3001);

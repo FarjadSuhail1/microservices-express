@@ -41,3 +41,11 @@ My employee number is 21803, so I will be running these services on following po
 - shipping-service (5001)
 - users-service (5008)
 - billing-service (5000)
+
+docker network create mynetwork
+docker network inspect mynetwork
+
+docker build -t shipping-service .
+docker run -d --network mynetwork -p 3009:5009 billing-service
+
+docker exec -it
